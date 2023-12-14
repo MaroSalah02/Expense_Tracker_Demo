@@ -11,7 +11,8 @@ public class  budget {
             Connection connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
             System.out.println("Connected");
 
-            String storedProcedure = "{call get_expenses(?,?)}"; // replace with your stored procedure name
+            // replace with your stored procedure name
+            String storedProcedure = "{call get_expenses(?,?)}";
             try (CallableStatement callableStatement = connection.prepareCall(storedProcedure)) {
 
                 // Set input parameters if any
@@ -43,7 +44,9 @@ public class  budget {
             e.printStackTrace();
         }
         } catch (SQLException e) {
+            System.out.println("error");
             e.printStackTrace();
+
         }
     }
 
