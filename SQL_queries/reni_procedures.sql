@@ -27,7 +27,7 @@ END
 
 ------------------------------------------------------------------------------------------
 GO
-CREATE PROCEDURE editing_expenses(
+Create PROCEDURE editing_expenses(
     @username varchar(20), --  Specifiying user because there are  multiple users who have different expenses + more secure 
     @eid int,
     @comment varchar(200),
@@ -42,19 +42,56 @@ AS
 BEGIN
     if(@operation='A')
     BEGIN
-    Insert into expenses (comment, amount,bid,tag_name) VALUES (@comment, @amount,@bid,@tagname);  -- Updated the insert values 
-    END
+		declare @remaining float;
 
-    else if(@operation='D')
-    BEGIN
-    DELETE FROM expenses WHERE eid=@eid and username = @username; -- Updated the delete condition More secure delete by adding username as input
-    END
+		SELECT @remaining = remaining
+		FROM budget
+		WHERE username = @username AND bid = @bid 
+	
+		if(@amount> @remaining)
+		BEGIN
+			return 'Out of remaining balance in budget'
+		end	
+		ELSE
+		BEGIN
+		
+			Insert into expenses (comment, amount,bid,tag_name) VALUES (@comment, @amount,@bid,@tagname);  -- Updated the insert values 
+			-- Updating remianing in budget after inserting the amoubt successfully 
+			UPDATE budget
+			Set remaining = remaining-@amount
+			where username = @username AND bid = @bid
+
+		END
+
+	END
+	else if(@operation='D')
+	BEGIN
+		DELETE FROM expenses WHERE eid=@eid and username = @username; -- Updated the delete condition More secure delete by adding username as input
+	END
 
     else if(@operation='E')
     BEGIN
-    UPDATE expenses SET comment = @comment, amount=@amount,tag_name = @tagname WHERE eid=@eid AND username = @username --createdDate=@createdDate WHERE eid=@eid; -- Updated the delete condition More secure delete by adding username as input + updating create date in update not good practice
-    END
 
+		declare @remaining2 float;
+		SELECT @remaining = remaining
+		FROM budget
+		WHERE username = @username AND bid = @bid 
+
+
+		-- adding the previous amount of expenses as we may change the previous amount with new amount. (Avoiding dublicates)
+		SET @remaining = @remaining + (SELECT amount from expenses where eid = @eid);
+
+		if(@amount> @remaining2)
+		BEGIN
+			return 'Out of remaining balance in budget'
+		END	
+		ELSE
+		BEGIN
+
+			UPDATE expenses SET comment = @comment, amount=@amount,tag_name = @tagname WHERE eid=@eid AND username = @username --createdDate=@createdDate WHERE eid=@eid; -- Updated the delete condition More secure delete by adding username as input + updating create date in update not good practice
+		END
+
+	END
 END
 
 ---------------------------------------------------------------------------------------------------------------------------------------
