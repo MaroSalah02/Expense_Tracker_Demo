@@ -3,16 +3,14 @@ package server;
 import java.sql.*;
 
 public class db {
-    private static final String JDBC_URL_Reni = "jdbc:sqlserver://localhost:1433;databaseName=Expenses;trustServerCertificate=true";
-    private static final String JDBC_URL_Maro = "jdbc:sqlserver://localhost:1433;databaseName=Expenses;trustServerCertificate=true";
-
-    private static final String USERNAME = "sa";
-    private static final String PASSWORD = "sa@123456";
-
+    private static String JDBC_URL = "jdbc:sqlserver://localhost:53655;databaseName=Expenses;IntegratedSecurity=true;trustServerCertificate=true";
+    private static String USERNAME = "sa";
+    private static String PASSWORD = "sa@123456";
     public Connection connection;
+
     public db(){
         try{
-            connection = DriverManager.getConnection(JDBC_URL_Maro, USERNAME, PASSWORD);
+            connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
             System.out.println("Connected");
 
         } catch (SQLException e) {
@@ -32,7 +30,7 @@ public class db {
     }
     public  void open_connection(){
         try {
-            connection = DriverManager.getConnection(JDBC_URL_Maro, USERNAME, PASSWORD);
+            connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
         }catch (SQLException e){
             System.out.println("error");
             e.printStackTrace();

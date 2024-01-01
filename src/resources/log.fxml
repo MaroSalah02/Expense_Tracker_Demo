@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="contentArea" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #1C1B1B;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller">
+   <children>
+      <Text fill="WHITE" layoutX="274.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Tracker V0.1">
+         <font>
+            <Font name="SansSerif Bold" size="34.0" />
+         </font>
+      </Text>
+      <PasswordField layoutX="337.0" layoutY="332.0" style="-fx-pref-width: 225;" styleClass="data_field" />
+      <Label layoutX="419.0" layoutY="306.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="224.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="337.0" layoutY="251.0" style="-fx-pref-width: 225;" styleClass="data_field" />
+      <Label fx:id="login_button" layoutX="470.0" layoutY="393.0" text="Log in" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="393.0" layoutY="393.0" text="Sing in" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

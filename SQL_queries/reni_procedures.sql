@@ -51,10 +51,10 @@ BEGIN
 		if(@amount> @remaining)
 		BEGIN
 			return 'Out of remaining balance in budget'
-		end	
+		end
+		--R shouldn't it add expense even if it is out of balance - just will show it with "-" and red color?
 		ELSE
 		BEGIN
-		
 			Insert into expenses (comment, amount,bid,tag_name) VALUES (@comment, @amount,@bid,@tagname);  -- Updated the insert values 
 			-- Updating remianing in budget after inserting the amoubt successfully 
 			UPDATE budget
@@ -89,6 +89,7 @@ BEGIN
 		BEGIN
 
 			UPDATE expenses SET comment = @comment, amount=@amount,tag_name = @tagname WHERE eid=@eid AND username = @username --createdDate=@createdDate WHERE eid=@eid; -- Updated the delete condition More secure delete by adding username as input + updating create date in update not good practice
+		--R should here also be bid=@bid ?
 		END
 
 	END

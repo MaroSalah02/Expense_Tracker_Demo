@@ -4,11 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="675537cf-2d07-480c-b5f6-db62f0ce34c5" name="Changes" comment="Creating Application">
-      <change afterPath="$PROJECT_DIR$/src/Application/budget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/notAllowedEntryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/outOfBalanceException.java" afterDir="false" />
+    <list default="true" id="675537cf-2d07-480c-b5f6-db62f0ce34c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL_queries/reni_procedures_2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/expense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/Style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/base.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/budget.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/expense.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/icons/calendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/icons/done.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/sunset.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/log.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Expense_Tracker_Demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Expense_Tracker_Demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL_queries/reni_procedures.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_queries/reni_procedures.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/budget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/db.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,33 +47,70 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2WiCLm5k3CDWgowb8p1zJX11759" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;module&quot;,
-      &quot;directory&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "C:/personal/code/project/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3505747",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal\code\project\src" />
+      <recent name="C:\personal\code\project" />
+      <recent name="C:\personal\code\project\.idea" />
+      <recent name="C:\personal\code\project\src\resources" />
+      <recent name="C:\personal\code\project\src\resources\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal\code\project" />
+      <recent name="C:\personal\code\project\src\resources" />
+      <recent name="C:\personal\code\project\src\resources\icons" />
+      <recent name="C:\personal\code\project\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Application" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Application.Main" />
+      <module name="project" />
+      <option name="VM_PARAMETERS" value=" --module-path &quot;C:\Program Files\Java\javafx-sdk-21.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,27 +119,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697205959829</updated>
-      <workItem from="1697205960977" duration="1596000" />
-      <workItem from="1697213847214" duration="6000" />
-      <workItem from="1697801202512" duration="2048000" />
-      <workItem from="1697973214745" duration="12000" />
-      <workItem from="1698212598760" duration="1335000" />
     </task>
-    <task id="LOCAL-00001" summary="Creating Application">
-      <created>1697206076539</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1697206076539</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creating Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating Application" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
