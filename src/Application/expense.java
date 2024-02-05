@@ -12,7 +12,6 @@ import java.util.List;
 
 
 public class expense {
-    //create expense method in class with successful sql connection
     //return output if it was successful
 
     @FXML

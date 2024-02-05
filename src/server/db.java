@@ -34,7 +34,7 @@ public class db {
         }
 
     }
-    //for what is this funciton? checking if connection is open?
+    //for what is this function? checking if connection is open?
     public  void open_connection(){
         try {
             connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);

@@ -1,6 +1,6 @@
 --R waits for Maro's check
 
-Create PROCEDURE get_budget_data(
+Create PROCEDURE get_budget(
 	@username varchar(20),
   	@operation char(1)
 )
@@ -17,26 +17,25 @@ END
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 GO
-CREATE PROCEDURE editing_budget_data(
+CREATE PROCEDURE editing_budget(
     @username varchar(20),
   	@name varchar(50),
     @limit float,
   	@bid int,
   	@currency varchar(20),
   	@operation char(1)
-
 )
 AS
 BEGIN
 -- R what about remaining? person will not be able to change it?
     if(@operation='A')
     BEGIN
-    Insert into budget (name, LIMIT, currency) VALUES (@name, @limit, @currency);  -- Updated the insert values
+    Insert into budget (username, name, LIMIT, currency, remaining) VALUES (@username, @name, @limit, @currency, @limit);  -- Updated the insert values
     END
 
     else if(@operation='E')
         BEGIN
-        UPDATE budget SET name = @name, limit=@limit,tag_name = @tagname WHERE bid=@bid AND username = @username --createdDate=@createdDate WHERE eid=@eid; -- Updated the delete condition More secure delete by adding username as input + updating create date in update not good practice
+        UPDATE budget SET name = @name, limit=@limit WHERE bid=@bid AND username = @username --createdDate=@createdDate WHERE eid=@eid; -- Updated the delete condition More secure delete by adding username as input + updating create date in update not good practice
     END
 
     else if(@operation='D')
