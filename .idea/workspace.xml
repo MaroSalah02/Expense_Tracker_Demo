@@ -4,32 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="675537cf-2d07-480c-b5f6-db62f0ce34c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL_queries/reni_procedures_2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/expense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/base.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/budget.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/expense.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/icons/calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/icons/done.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/images/sunset.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/log.fxml" afterDir="false" />
+    <list default="true" id="675537cf-2d07-480c-b5f6-db62f0ce34c5" name="Changes" comment="Adding new SQL procedures&#10;Launching JavaFX and creating views for log in and expense windows">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expense_Tracker_Demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Expense_Tracker_Demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL_queries/reni_procedures.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_queries/reni_procedures.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL_queries/reni_procedures_2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_queries/reni_procedures_2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/budget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/expense.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/expense.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/icons/done.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/icons/done.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/db.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,21 +55,21 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/personal/code/project/src",
+    "last_opened_file_path": "C:/personal/code/project/src/resources/icons",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3505747",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal\code\project\src\resources\icons" />
       <recent name="C:\personal\code\project\src" />
       <recent name="C:\personal\code\project" />
       <recent name="C:\personal\code\project\.idea" />
       <recent name="C:\personal\code\project\src\resources" />
-      <recent name="C:\personal\code\project\src\resources\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\personal\code\project" />
@@ -120,6 +105,15 @@
       <option name="presentableId" value="Default" />
       <updated>1697205959829</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adding new SQL procedures&#10;Launching JavaFX and creating views for log in and expense windows">
+      <option name="closed" value="true" />
+      <created>1704141039743</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704141039743</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,5 +126,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding new SQL procedures&#10;Launching JavaFX and creating views for log in and expense windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding new SQL procedures&#10;Launching JavaFX and creating views for log in and expense windows" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

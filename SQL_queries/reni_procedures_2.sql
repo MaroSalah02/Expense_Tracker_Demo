@@ -2,7 +2,7 @@
 
 Create PROCEDURE get_budget_data(
 	@username varchar(20),
-  	@operation char(1),
+  	@operation char(1)
 )
 AS
 BEGIN
@@ -49,7 +49,7 @@ END
 
 Create PROCEDURE get_tags(
 	@username varchar(20),
-  	@operation char(1),
+  	@operation char(1)
 )
 AS
 BEGIN

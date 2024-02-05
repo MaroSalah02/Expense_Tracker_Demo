@@ -29,7 +29,7 @@ END
 GO
 Create PROCEDURE editing_expenses(
     @username varchar(20), --  Specifiying user because there are  multiple users who have different expenses + more secure 
-    @eid int,
+    @eid int = NULL,-- CHANGED 2.05
     @comment varchar(200),
     --@createdDate TIME, -- No need to add created time if the default value is when it's created 
     @amount int, 
@@ -55,7 +55,7 @@ BEGIN
 		--R shouldn't it add expense even if it is out of balance - just will show it with "-" and red color?
 		ELSE
 		BEGIN
-			Insert into expenses (comment, amount,bid,tag_name) VALUES (@comment, @amount,@bid,@tagname);  -- Updated the insert values 
+			Insert into expenses (username,comment, amount,bid,tag_name) VALUES (@username,@comment, @amount,@bid,@tagname);  -- Updated the insert values -- CHANGED 2.05
 			-- Updating remianing in budget after inserting the amoubt successfully 
 			UPDATE budget
 			Set remaining = remaining-@amount
