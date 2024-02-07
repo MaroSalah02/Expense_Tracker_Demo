@@ -1,5 +1,4 @@
 package Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -44,7 +43,7 @@ public class Controller implements Initializable {
         contentArea.getChildren().setAll(fxml);
     }
     public void tags(javafx.event.ActionEvent actionEvent) throws IOException{
-        Parent fxml = FXMLLoader.load(getClass().getResource("/resources/tags.fxml"));
+        Parent fxml = FXMLLoader.load(getClass().getResource("/resources/tag.fxml"));
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(fxml);
     }

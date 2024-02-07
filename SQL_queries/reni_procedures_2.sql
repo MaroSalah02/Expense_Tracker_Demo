@@ -1,5 +1,3 @@
---R waits for Maro's check
-
 Create PROCEDURE get_budget(
 	@username varchar(20),
   	@operation char(1)
@@ -73,7 +71,7 @@ BEGIN
     if EXISTS (
     	SELECT 1
     	from app_user
-    	where username = @username and PASSOWORD
+    	where username = @username and PASSWORD = @password
     )
     Begin
     	SET @success = 1

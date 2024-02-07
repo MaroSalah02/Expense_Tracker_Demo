@@ -9,7 +9,6 @@ public class db {
     private static String USERNAME = "sa";
     private static String PASSWORD = "sa@123456";
     public Connection connection;
-
     public String LogUser ="renamrsh";
     private List<String> tag_options = new ArrayList<>();
     private List<List<String>> budget_options = new ArrayList<>();
@@ -44,9 +43,8 @@ public class db {
         }
     }
 
-    public void executeStoredProcedure() {
+    public void executeGettingStoredProcedures() {
         String storedProcedure_gtags = "{call get_tags(?,?)}";
-        String storedProcedure_gbudget = "{call get_budget_data(?,?)}";
         try (CallableStatement callableStatement = connection.prepareCall(storedProcedure_gtags)) {
 
             callableStatement.setString(1, LogUser);
@@ -67,6 +65,7 @@ public class db {
             System.out.println("Error");
             //e.printStackTrace();
         }
+        String storedProcedure_gbudget = "{call get_budget(?,?)}";
         try (CallableStatement callableStatement_budget = connection.prepareCall(storedProcedure_gbudget)) {
 
             callableStatement_budget.setString(1, LogUser);
@@ -107,7 +106,7 @@ public class db {
         //System.out.println(budget_options);
         return budget_options;
     }
-    public void executeEditingExpensesProcedure(String username, Integer eid, String comment, int amount, String tagname, int bid, char operation) {
+    public void executeEditingExpensesStoredProcedure(String username, Integer eid, String comment, int amount, String tagname, int bid, char operation) {
         String storedProcedure_editing_expenses = "{call editing_expenses(?, ?, ?, ?, ?, ?, ?)}";
 
         try (CallableStatement callableStatement = connection.prepareCall(storedProcedure_editing_expenses)) {
@@ -126,6 +125,24 @@ public class db {
             e.printStackTrace();
             // Handle SQLException appropriately
         }
+    }
+
+    public void executeEditingTagStoredProcedure(String username, String tagName, String newTagName, char operation) {
+        String storedProcedure_editing_expenses = "{call editing_tags(?, ?, ?, ?)}";
+
+        try (CallableStatement callableStatement = connection.prepareCall(storedProcedure_editing_expenses)) {
+            callableStatement.setString(1, username);
+            callableStatement.setString(2, tagName);
+            callableStatement.setString(3, newTagName);
+            callableStatement.setString(4, String.valueOf(operation));
+
+            callableStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle SQLException appropriately
+        }
+
     }
 
 

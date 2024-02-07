@@ -37,7 +37,7 @@ public class Main extends Application {
 
         new budget();
         server.db database = new server.db();
-        database.executeStoredProcedure();
+
         database.close_connection();
         launch();
 

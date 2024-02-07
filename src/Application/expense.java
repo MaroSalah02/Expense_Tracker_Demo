@@ -3,10 +3,7 @@ package Application;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import server.db;
-
 import java.time.LocalDate;
-
 import java.awt.event.ActionEvent;
 import java.util.List;
 
@@ -41,10 +38,17 @@ public class expense {
 
     public void initialize() {
 
-        datePicker.setValue(LocalDate.now());
+        try{
+            datePicker.setValue(LocalDate.now());
+
+        } catch (Exception e) {
+            System.out.println("error");
+            //e.printStackTrace();
+        }
+
 
         server.db database = new server.db();
-        database.executeStoredProcedure();
+        database.executeGettingStoredProcedures();
 
         List<String> tagOptions = database.getTagOptions();
         List<List<String>> budgetOptions = database.getBudgetOptions();
@@ -81,7 +85,7 @@ public class expense {
             amountText = Amount.getText();
             if (!amountText.isEmpty()) {
                 int amountValue = Integer.parseInt(amountText);
-                database.executeEditingExpensesProcedure(database.LogUser, 0, commentText, amountValue, chooseTag, chooseBudget, 'A');
+                database.executeEditingExpensesStoredProcedure(database.LogUser, 0, commentText, amountValue, chooseTag, chooseBudget, 'A');
                 Comment.clear();
                 Amount.clear();
             } else {
